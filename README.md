@@ -1,4 +1,4 @@
-# ✨ waste-It : Klasifikasi Otomatis Limbah Konsumsi Rumah Tangga Menggunakan InceptionV3 & MobileNetV2 ✨
+# ✨ waste-It : Analisis Sentimen Ulasan Aplikasi GO-JEK dengan Menggunakan Model LSTM dan GRU ✨
 
 ## Latar Belakang & Tujuan
 Aplikasi GO-JEK telah menjadi salah satu super-app terkemuka di Indonesia yang menyediakan berbagai layanan, seperti transportasi, pengiriman makanan, dan pembayaran digital. Ulasan pengguna memegang peran penting dalam menilai kualitas layanan dan kepuasan pelanggan. Analisis sentimen terhadap ulasan ini memberikan wawasan berharga mengenai persepsi pengguna terhadap performa aplikasi, terutama setelah pembaruan fitur atau versi tertentu.Dengan tujuan Mengidentifikasi sentimen positif, negatif, dan netral dalam ulasan aplikasi GO-JEK,Mengevaluasi dampak pembaruan aplikasi terhadap tingkat kepuasan pengguna,Memberikan rekomendasi berbasis data untuk perbaikan dan peningkatan kualitas layanan aplikasi.
@@ -6,7 +6,7 @@ Aplikasi GO-JEK telah menjadi salah satu super-app terkemuka di Indonesia yang m
 
 Teknologi machine learning, seperti CNN dengan arsitektur InceptionV3 dan MobileNetV2, dapat mengotomatisasi klasifikasi sampah secara cepat dan akurat, mendukung daur ulang yang efisien. Solusi ini membantu mengurangi dampak negatif limbah rumah tangga sekaligus meningkatkan pengelolaan sampah berkelanjutan secara lokal dan global.
 
-**Link Dataset yang digunakan:** [Garbage Dataset](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2).
+**Link Dataset yang digunakan:** [Garbage Dataset](https://www.kaggle.com/datasets/ucupsedaya/gojek-app-reviews-bahasa-indonesia).
 
 **InceptionV3 Architecture**
 ![image](assets/inceptionv3.jpg)
