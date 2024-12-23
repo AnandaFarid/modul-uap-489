@@ -58,22 +58,6 @@ Kesetaraan Kinerja Antar Kelas:
 Model pertama memiliki performa yang cukup seimbang di kedua kelas.
 Model kedua hanya unggul pada kelas mayoritas (kelas 4) dan gagal menangani kelas lainnya.
 
-## Local Web Deployment
-
-### Tampilan HomePage
-
-![image](assets/hp1.png)
-![image](assets/hp2.png)
-
-### Tampilan HomePage Setelah Upload Image
-
-![image](assets/up.png)
-
-### Tampilan Prediction Result
-
-![image](assets/result1.png)
-![image](assets/result2.png)
-![image](assets/result3.png)
 
 ## Author 👨‍💻 
-- Andrian Satrio B. | 202110370311518 [@iambethaviaji](https://github.com/iambethaviaji)
+- Ananda Farid Syahputra. | 202110370311489 [@AnandaFarid](https://github.com/AnandaFarid)
