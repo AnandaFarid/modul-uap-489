@@ -8,15 +8,13 @@ Teknologi machine learning, seperti CNN dengan arsitektur InceptionV3 dan Mobile
 
 **Link Dataset yang digunakan:** [Garbage Dataset](https://www.kaggle.com/datasets/ucupsedaya/gojek-app-reviews-bahasa-indonesia).
 
-**InceptionV3 Architecture**
-![image](assets/inceptionv3.jpg)
+**LSTM**
 
-InceptionV3 adalah model CNN canggih dari Google yang dirancang untuk klasifikasi gambar dengan efisiensi tinggi. Model ini menggunakan modul Inception yang menggabungkan berbagai ukuran kernel konvolusi, memungkinkan deteksi pola pada berbagai skala. Dengan transfer learning, InceptionV3 dapat diadaptasi untuk mengenali berbagai jenis limbah rumah tangga dengan akurasi tinggi. Model ini cocok untuk dataset kompleks yang membutuhkan analisis mendalam terhadap detail visual.
+LSTM adalah jenis jaringan saraf tiruan yang termasuk dalam keluarga recurrent neural networks (RNN). LSTM dirancang untuk menangani masalah vanishing gradient yang sering terjadi pada RNN biasa. Model ini sangat efektif untuk mempelajari pola dalam data sekuensial, seperti teks, sinyal waktu (time series), atau data lain yang memiliki dependensi urutan.
 
-**MobileNetV2 Architecture**
-![image](assets/mobilenetv2.png)
+**GRU**
 
-MobileNetV2 adalah model CNN ringan yang dirancang untuk perangkat dengan sumber daya terbatas. Menggunakan blok inverted residual dan depthwise separable convolution, model ini sangat efisien dalam memproses citra tanpa mengorbankan akurasi. MobileNetV2 ideal untuk aplikasi real-time seperti pemilahan sampah otomatis berbasis perangkat seluler, dengan kecepatan prediksi tinggi dan kebutuhan komputasi rendah.
+GRU adalah jenis jaringan saraf tiruan yang termasuk dalam keluarga recurrent neural networks (RNN). GRU dikembangkan sebagai alternatif dari LSTM dengan struktur yang lebih sederhana, tetapi tetap efektif dalam menangani masalah vanishing gradient dan menangkap pola jangka panjang dalam data sekuensial.
 
 ## Dependensi & Langkah Instalasi 📃
 dependencies = ["tensorflow>=2.18.0", "joblib>=1.4.2", "scikit-learn>=1.6.0", "streamlit>=1.41.1"]
@@ -33,42 +31,13 @@ dependencies = ["tensorflow>=2.18.0", "joblib>=1.4.2", "scikit-learn>=1.6.0", "s
 ## Struktur File 📄
 - code/: Berkas kode ipynb dari model klasifikasi.
 - src/uap/**app.py**: Berkas aplikasi utama yang berisi rute dan fungsi.
-- src/uap/**klasifikasi_sampah.py**: Berkas penerapan dari model untuk klasifikasi dan tampilan antarmuka web.
+- src/uap/**klasifikasi_Teks.py**: Berkas penerapan dari model untuk klasifikasi dan tampilan antarmuka web.
 - src/Model/: Berisi saved model berformat .h5 dari kedua arsitektur.
 
 ## Menjalankan App 💻
 - Jalankan skrip dengan streamlit run ./src/app.py
 - Akses aplikasi di peramban Web dengan alamat http://localhost:8501/
 
-**Model Evaluation**
-
-### InceptionV3 Model ✨
-
-![image](assets/Plot_Inceptionv3.png)
-
-Plot diatas menunjukkan bahwa *Model Accuracy* cukup stabil dalam proses training, namun *Model Loss* mengalami *overfitting* yang ditandai dengan grafik berfluktuasi yang tidak wajar.
-
-![image](assets/classreport_inceptionv3.png)
-
-Gambar diatas menunjukkan *Classification Report* dari Model InceptionV3 menghasilkan nilai akurasi sebesar *90%* yang dapat digolongkan cukup optimal.
-
-![image](assets/cm_inceptionv3.png)
-
-Confusion Matrix tersebut menunjukkan bahwa model mampu memprediksi citra dengan cukup baik dengan kesalahan yang tidak terlalu signifikan.
-
-### MobileNetV2 Model ✨
-
-![image](assets/Plot_Mobilenetv2.png)
-
-Plot diatas menunjukkan bahwa *Model Accuracy* cukup stabil dalam proses training dan *Model Loss* sudah dalam kategori cukup baik dibuktikan dengan grafik yang tidak fluktuatif.
-
-![image](assets/classreport_mobilenetv2.png)
-
-Gambar diatas menunjukkan *Classification Report* dari Model InceptionV3 menghasilkan nilai akurasi sebesar **84%** yang dapat digolongkan cukup optimal.
-
-![image](assets/cm_mobilenetv2.png)
-
-Confusion Matrix tersebut menunjukkan bahwa model mampu memprediksi citra dengan cukup baik dengan kesalahan yang tidak terlalu signifikan.
 
 ## Hasil Analisis
 Berdasarkan perbandingan dari kedua arsitektur di atas, InceptionV3 menjadi model yang unggul apabila dinilai dari segi akurasi, namun grafik loss mengalami overfit. Sedangkan apabila dinilai dari segi grafik validasi MobileNetV2 lebih unggul karena lebih baik namun dari segi akurasi berada di bawah InceptionV3. 
