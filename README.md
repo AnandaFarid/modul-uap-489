@@ -6,7 +6,7 @@ Aplikasi GO-JEK telah menjadi salah satu super-app terkemuka di Indonesia yang m
 
 Teknologi machine learning, seperti CNN dengan arsitektur InceptionV3 dan MobileNetV2, dapat mengotomatisasi klasifikasi sampah secara cepat dan akurat, mendukung daur ulang yang efisien. Solusi ini membantu mengurangi dampak negatif limbah rumah tangga sekaligus meningkatkan pengelolaan sampah berkelanjutan secara lokal dan global.
 
-**Link Dataset yang digunakan:** [Garbage Dataset](https://www.kaggle.com/datasets/ucupsedaya/gojek-app-reviews-bahasa-indonesia).
+**Link Dataset yang digunakan:** [Gojek Dataset](https://www.kaggle.com/datasets/ucupsedaya/gojek-app-reviews-bahasa-indonesia).
 
 **LSTM**
 
@@ -40,8 +40,23 @@ dependencies = ["tensorflow>=2.18.0", "joblib>=1.4.2", "scikit-learn>=1.6.0", "s
 
 
 ## Hasil Analisis
-Berdasarkan perbandingan dari kedua arsitektur di atas, InceptionV3 menjadi model yang unggul apabila dinilai dari segi akurasi, namun grafik loss mengalami overfit. Sedangkan apabila dinilai dari segi grafik validasi MobileNetV2 lebih unggul karena lebih baik namun dari segi akurasi berada di bawah InceptionV3. 
-Oleh karena itu, memungkinkan perlunya dilakukan perbaikan dalam pre-processing data seperti ditambahkannya augmentasi. Serta perlu ditambahkannya nilai epoch agar meningkatkan performa model.
+Analisis Perbandingan
+Jumlah Kelas dan Distribusi Data:
+
+Classification Report Pertama menangani dataset dengan dua kelas dan distribusi yang relatif seimbang. Hal ini mempermudah model untuk bekerja dengan baik pada kedua kelas.
+Classification Report Kedua memiliki lima kelas dengan distribusi yang sangat tidak seimbang, sehingga model cenderung bias terhadap kelas mayoritas.
+Akurasi:
+
+Akurasi model pertama (91%) lebih tinggi dibandingkan model kedua (80%).
+Namun, akurasi pada model kedua sangat bias karena kelas mayoritas mendominasi prediksi.
+Performa pada Kelas Minoritas:
+
+Model pertama memiliki performa yang stabil untuk kedua kelas.
+Model kedua sangat buruk dalam memprediksi kelas minoritas (kelas 1, 2, dan 3), terlihat dari rendahnya precision, recall, dan F1-score.
+Kesetaraan Kinerja Antar Kelas:
+
+Model pertama memiliki performa yang cukup seimbang di kedua kelas.
+Model kedua hanya unggul pada kelas mayoritas (kelas 4) dan gagal menangani kelas lainnya.
 
 ## Local Web Deployment
 
