@@ -35,7 +35,7 @@ GRU adalah jenis jaringan saraf tiruan yang termasuk dalam keluarga recurrent ne
 
 ## Menjalankan App 💻
 - Jalankan skrip dengan streamlit run ./src/app.py
-- Akses aplikasi di peramban Web dengan alamat http://localhost:8501/
+- Akses aplikasi di peramban Web dengan alamat http://localhost:8502/
 
 
 ## Hasil Analisis
