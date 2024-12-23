@@ -17,7 +17,6 @@ LSTM adalah jenis jaringan saraf tiruan yang termasuk dalam keluarga recurrent n
 GRU adalah jenis jaringan saraf tiruan yang termasuk dalam keluarga recurrent neural networks (RNN). GRU dikembangkan sebagai alternatif dari LSTM dengan struktur yang lebih sederhana, tetapi tetap efektif dalam menangani masalah vanishing gradient dan menangkap pola jangka panjang dalam data sekuensial.
 
 ## Dependensi & Langkah Instalasi 📃
-dependencies = ["tensorflow>=2.18.0", "joblib>=1.4.2", "scikit-learn>=1.6.0", "streamlit>=1.41.1"]
 
 1. wajib pdm init terlebih dahulu
 
